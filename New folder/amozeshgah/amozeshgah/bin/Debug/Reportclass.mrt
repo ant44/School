@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="2">
+      <Class Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>Class</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="3">
+          <value>Capacity,System.Int32</value>
+          <value>CollegName,System.String</value>
+          <value>ClassNumber,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>53cdd4f856204ca997d228c73c8253ca</Guid>
+        <Name>Class</Name>
+      </Class>
+      <class Ref="3" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>class</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="3">
+          <value>class_ID,System.String</value>
+          <value>capacity,System.String</value>
+          <value>description,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>c00eff4e4a624e91a97725377e27e537</Guid>
+        <Name>class</Name>
+      </class>
+    </BusinessObjects>
+    <Databases isList="true" count="1">
+      <MSSQL1 Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MSSQL1</Alias>
+        <ConnectionStringEncrypted>+XT7CU9ZAfXhWu3senjrY55g2YhhVHud/E+5yWlcJV7zxJWhzVd73WkI1b16cGE/0XD3KE9Wu9VnXTnU8VykP8Q=</ConnectionStringEncrypted>
+        <Name>MSSQL1</Name>
+      </MSSQL1>
+    </Databases>
+    <DataSources isList="true" count="5">
+      <classTable Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>classTable</Alias>
+        <Columns isList="true" count="5">
+          <value>class_ID,System.String</value>
+          <value>capacity,System.Int32</value>
+          <value>video_projector,System.Boolean</value>
+          <value>cooler,System.Boolean</value>
+          <value>description,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>classTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from classTable</SqlCommand>
+      </classTable>
+      <CoTable Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>CoTable</Alias>
+        <Columns isList="true" count="9">
+          <value>coid,System.String</value>
+          <value>teacherId,System.String</value>
+          <value>dptID,System.Int32</value>
+          <value>price,System.Int32</value>
+          <value>capacity,System.Int32</value>
+          <value>hour,System.Int32</value>
+          <value>start_date,System.String</value>
+          <value>classId,System.String</value>
+          <value>logo,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>CoTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from CoTable</SqlCommand>
+      </CoTable>
+      <selectCourse Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>selectCourse</Alias>
+        <Columns isList="true" count="6">
+          <value>rowID,System.Int32</value>
+          <value>stid,System.String</value>
+          <value>coid,System.String</value>
+          <value>grade,System.Single</value>
+          <value>description,System.String</value>
+          <value>pardakht,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>selectCourse</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from selectCourse</SqlCommand>
+      </selectCourse>
+      <stTable Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>stTable</Alias>
+        <Columns isList="true" count="6">
+          <value>studentID,System.String</value>
+          <value>stName,System.String</value>
+          <value>stFamily,System.String</value>
+          <value>stAddress,System.String</value>
+          <value>stImage,System.String</value>
+          <value>stTel,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>stTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from stTable</SqlCommand>
+      </stTable>
+      <teacherTable Ref="9" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>teacherTable</Alias>
+        <Columns isList="true" count="8">
+          <value>teacherId,System.String</value>
+          <value>teacherName,System.String</value>
+          <value>teacherFamily,System.String</value>
+          <value>teacherAddress,System.String</value>
+          <value>teacherTel,System.String</value>
+          <value>TeacherCetifacrte,System.String</value>
+          <value>TeacherExpert,System.String</value>
+          <value>teImage,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>teacherTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from teacherTable</SqlCommand>
+      </teacherTable>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="10" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <DataBand1 Ref="11" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.2,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <HeaderclassTable Ref="12" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.9,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="3">
+            <HeaderclassTable_description Ref="13" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;[89:5:2];1;Solid;False;4;Black;True</Border>
+              <Brush>[255:180:177]</Brush>
+              <ClientRectangle>0,0,2.6,0.3</ClientRectangle>
+              <ComponentStyle>Red 75%_Data1_Even Style</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderclassTable_description</Name>
+              <Page isRef="10" />
+              <Parent isRef="12" />
+              <Text>توضیحات</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderclassTable_description>
+            <HeaderclassTable_capacity Ref="14" type="Text" isKey="true">
+              <Border>Top, Bottom;[89:5:2];1;Solid;False;4;Black;True</Border>
+              <Brush>[255:180:177]</Brush>
+              <ClientRectangle>2.6,0,2.6,0.3</ClientRectangle>
+              <ComponentStyle>Red 75%_Data1_Even Style</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderclassTable_capacity</Name>
+              <Page isRef="10" />
+              <Parent isRef="12" />
+              <Text>ظرفیت</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderclassTable_capacity>
+            <HeaderclassTable_class_ID Ref="15" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;[89:5:2];1;Solid;False;4;Black;True</Border>
+              <Brush>[255:180:177]</Brush>
+              <ClientRectangle>5.2,0,2.5,0.3</ClientRectangle>
+              <ComponentStyle>Red 75%_Data1_Even Style</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,11,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderclassTable_class_ID</Name>
+              <Page isRef="10" />
+              <Parent isRef="12" />
+              <Text>کد کلاس</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderclassTable_class_ID>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderclassTable</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+        </HeaderclassTable>
+        <DataclassTable Ref="16" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,1.6,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="3">
+            <DataclassTable_description Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[229:185:183]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.6,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataclassTable_description</Name>
+              <Page isRef="10" />
+              <Parent isRef="16" />
+              <Text>{classTable.description}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataclassTable_description>
+            <DataclassTable_capacity Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[229:185:183]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.6,0,2.6,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataclassTable_capacity</Name>
+              <Page isRef="10" />
+              <Parent isRef="16" />
+              <Text>{classTable.capacity}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataclassTable_capacity>
+            <DataclassTable_class_ID Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[229:185:183]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.2,0,2.5,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataclassTable_class_ID</Name>
+              <Page isRef="10" />
+              <Parent isRef="16" />
+              <Text>{classTable.class_ID}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataclassTable_class_ID>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>classTable</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataclassTable</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+          <Sort isList="true" count="0" />
+        </DataclassTable>
+        <FooterclassTable Ref="20" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.3,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="3">
+            <FooterclassTable_description Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[229:185:183]</Brush>
+              <ClientRectangle>0,0,2.6,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>FooterclassTable_description</Name>
+              <Page isRef="10" />
+              <Parent isRef="20" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </FooterclassTable_description>
+            <FooterclassTable_capacity Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[229:185:183]</Brush>
+              <ClientRectangle>2.6,0,2.6,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>FooterclassTable_capacity</Name>
+              <Page isRef="10" />
+              <Parent isRef="20" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </FooterclassTable_capacity>
+            <FooterclassTable_class_ID Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[229:185:183]</Brush>
+              <ClientRectangle>5.2,0,2.5,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>FooterclassTable_class_ID</Name>
+              <Page isRef="10" />
+              <Parent isRef="20" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </FooterclassTable_class_ID>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterclassTable</Name>
+          <Page isRef="10" />
+          <Parent isRef="10" />
+        </FooterclassTable>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>2c3151d0a344482cb214fa2eaa857394</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="24" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="25" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/13/2019 10:06:30 PM</ReportChanged>
+  <ReportCreated>12/13/2019 3:16:27 PM</ReportCreated>
+  <ReportFile>C:\Users\phara\Desktop\New folder\amozeshgah\amozeshgah\bin\Debug\Reportclass.mrt</ReportFile>
+  <ReportGuid>b07724f821f740a5aa69652ebea64280</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2015.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="13">
+    <Red_x0020_75_x0025__Report_Title1 Ref="26" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[89:5:2];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item24 Ref="27" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item24>
+      </Conditions>
+      <Font>Arial,14,Bold</Font>
+      <Name>Red 75%_Report_Title1</Name>
+      <TextBrush>[189:105:102]</TextBrush>
+    </Red_x0020_75_x0025__Report_Title1>
+    <Red_x0020_75_x0025__Report_Title2 Ref="28" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[89:5:2];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item26 Ref="29" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item26>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Red 75%_Report_Title2</Name>
+      <TextBrush>[189:105:102]</TextBrush>
+    </Red_x0020_75_x0025__Report_Title2>
+    <Red_x0020_75_x0025__Report_Summary1 Ref="30" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[89:5:2];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item28 Ref="31" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item28>
+      </Conditions>
+      <Font>Arial,12,Bold</Font>
+      <Name>Red 75%_Report_Summary1</Name>
+      <TextBrush>[189:105:102]</TextBrush>
+    </Red_x0020_75_x0025__Report_Summary1>
+    <Red_x0020_75_x0025__Report_Summary2 Ref="32" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[89:5:2];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item30 Ref="33" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportSummary</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item30>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Red 75%_Report_Summary2</Name>
+      <TextBrush>[189:105:102]</TextBrush>
+    </Red_x0020_75_x0025__Report_Summary2>
+    <Red_x0020_75_x0025__Page_Header Ref="34" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[89:5:2];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item32 Ref="35" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item32>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Red 75%_Page_Header</Name>
+      <TextBrush>[189:105:102]</TextBrush>
+    </Red_x0020_75_x0025__Page_Header>
+    <Red_x0020_75_x0025__Page_Footer Ref="36" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[89:5:2];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item34 Ref="37" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item34>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Red 75%_Page_Footer</Name>
+      <TextBrush>[189:105:102]</TextBrush>
+    </Red_x0020_75_x0025__Page_Footer>
+    <Red_x0020_75_x0025__Group_Header1 Ref="38" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[89:5:2];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item36 Ref="39" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item36>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Red 75%_Group_Header1</Name>
+      <TextBrush>[189:105:102]</TextBrush>
+    </Red_x0020_75_x0025__Group_Header1>
+    <Red_x0020_75_x0025__Group_Footer1 Ref="40" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[89:5:2];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item38 Ref="41" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item38>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Red 75%_Group_Footer1</Name>
+      <TextBrush>[189:105:102]</TextBrush>
+    </Red_x0020_75_x0025__Group_Footer1>
+    <Red_x0020_75_x0025__Header1 Ref="42" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[89:5:2];1;Solid;False;4;Black;True</Border>
+      <Brush>[189:105:102]</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item40 Ref="43" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item40>
+      </Conditions>
+      <Font>Arial,8,Bold</Font>
+      <Name>Red 75%_Header1</Name>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Red_x0020_75_x0025__Header1>
+    <Red_x0020_75_x0025__Data1 Ref="44" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[89:5:2];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item42 Ref="45" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item42>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Red 75%_Data1</Name>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Red_x0020_75_x0025__Data1>
+    <Red_x0020_75_x0025__Data1_Odd_x0020_Style Ref="46" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[89:5:2];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:255:252]</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item44 Ref="47" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item44>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Red 75%_Data1_Odd Style</Name>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Red_x0020_75_x0025__Data1_Odd_x0020_Style>
+    <Red_x0020_75_x0025__Data1_Even_x0020_Style Ref="48" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[89:5:2];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:180:177]</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item46 Ref="49" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item46>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Red 75%_Data1_Even Style</Name>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Red_x0020_75_x0025__Data1_Even_x0020_Style>
+    <Red_x0020_75_x0025__Footer1 Ref="50" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[89:5:2];1;Solid;False;4;Black;True</Border>
+      <Brush>[209:125:122]</Brush>
+      <CollectionName>Red 75%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item48 Ref="51" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item48>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Red 75%_Footer1</Name>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Red_x0020_75_x0025__Footer1>
+  </Styles>
+</StiSerializer>

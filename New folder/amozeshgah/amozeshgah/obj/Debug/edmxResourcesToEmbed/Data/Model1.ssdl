@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NetCollegeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="classTable">
+    <Key>
+      <PropertyRef Name="class_ID" />
+    </Key>
+    <Property Name="class_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="capacity" Type="int" />
+    <Property Name="video_projector" Type="bit" />
+    <Property Name="cooler" Type="bit" />
+    <Property Name="description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CoTable">
+    <Key>
+      <PropertyRef Name="coid" />
+    </Key>
+    <Property Name="coid" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacherId" Type="nchar" MaxLength="10" />
+    <Property Name="dptID" Type="int" />
+    <Property Name="price" Type="int" />
+    <Property Name="capacity" Type="int" />
+    <Property Name="hour" Type="int" />
+    <Property Name="start_date" Type="nvarchar" MaxLength="50" />
+    <Property Name="classId" Type="nchar" MaxLength="10" />
+    <Property Name="logo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DeptTable">
+    <Key>
+      <PropertyRef Name="deptId" />
+    </Key>
+    <Property Name="deptId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="deptName" Type="nvarchar" MaxLength="50" />
+    <Property Name="boss" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="selectCourse">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stid" Type="char" MaxLength="10" />
+    <Property Name="coid" Type="nvarchar" MaxLength="50" />
+    <Property Name="grade" Type="float" />
+    <Property Name="description" Type="nvarchar" MaxLength="50" />
+    <Property Name="pardakht" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="stTable">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="studentID" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="stName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="stFamily" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="stAddress" Type="nvarchar" MaxLength="150" />
+    <Property Name="stImage" Type="nvarchar" MaxLength="50" />
+    <Property Name="stTel" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="teacherTable">
+    <Key>
+      <PropertyRef Name="teacherId" />
+    </Key>
+    <Property Name="teacherId" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="teacherName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacherFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="teacherAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="teacherTel" Type="nchar" MaxLength="10" />
+    <Property Name="TeacherCetifacrte" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeacherExpert" Type="nvarchar" MaxLength="50" />
+    <Property Name="teImage" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="usersTable">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="uname" Type="nvarchar" MaxLength="50" />
+    <Property Name="ufamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="accessType" Type="int" />
+  </EntityType>
+  <Association Name="FK_CoTable_classTable">
+    <End Role="classTable" Type="Self.classTable" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CoTable" Type="Self.CoTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="classTable">
+        <PropertyRef Name="class_ID" />
+      </Principal>
+      <Dependent Role="CoTable">
+        <PropertyRef Name="classId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoTable_DeptTable">
+    <End Role="DeptTable" Type="Self.DeptTable" Multiplicity="0..1" />
+    <End Role="CoTable" Type="Self.CoTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeptTable">
+        <PropertyRef Name="deptId" />
+      </Principal>
+      <Dependent Role="CoTable">
+        <PropertyRef Name="dptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoTable_teacherTable">
+    <End Role="teacherTable" Type="Self.teacherTable" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CoTable" Type="Self.CoTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacherTable">
+        <PropertyRef Name="teacherId" />
+      </Principal>
+      <Dependent Role="CoTable">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_selectCourse_CoTable">
+    <End Role="CoTable" Type="Self.CoTable" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="selectCourse" Type="Self.selectCourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoTable">
+        <PropertyRef Name="coid" />
+      </Principal>
+      <Dependent Role="selectCourse">
+        <PropertyRef Name="coid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_selectCourse_stTable">
+    <End Role="stTable" Type="Self.stTable" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="selectCourse" Type="Self.selectCourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="stTable">
+        <PropertyRef Name="studentID" />
+      </Principal>
+      <Dependent Role="selectCourse">
+        <PropertyRef Name="stid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NetCollegeModelStoreContainer">
+    <EntitySet Name="classTable" EntityType="Self.classTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoTable" EntityType="Self.CoTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeptTable" EntityType="Self.DeptTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="selectCourse" EntityType="Self.selectCourse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stTable" EntityType="Self.stTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="teacherTable" EntityType="Self.teacherTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usersTable" EntityType="Self.usersTable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CoTable_classTable" Association="Self.FK_CoTable_classTable">
+      <End Role="classTable" EntitySet="classTable" />
+      <End Role="CoTable" EntitySet="CoTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoTable_DeptTable" Association="Self.FK_CoTable_DeptTable">
+      <End Role="DeptTable" EntitySet="DeptTable" />
+      <End Role="CoTable" EntitySet="CoTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoTable_teacherTable" Association="Self.FK_CoTable_teacherTable">
+      <End Role="teacherTable" EntitySet="teacherTable" />
+      <End Role="CoTable" EntitySet="CoTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_selectCourse_CoTable" Association="Self.FK_selectCourse_CoTable">
+      <End Role="CoTable" EntitySet="CoTable" />
+      <End Role="selectCourse" EntitySet="selectCourse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_selectCourse_stTable" Association="Self.FK_selectCourse_stTable">
+      <End Role="stTable" EntitySet="stTable" />
+      <End Role="selectCourse" EntitySet="selectCourse" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

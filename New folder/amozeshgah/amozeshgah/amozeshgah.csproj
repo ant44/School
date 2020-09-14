@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FD66018-73FA-4CEE-91D5-A227C1F02D6A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>amozeshgah</RootNamespace>
+    <AssemblyName>amozeshgah</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_school_building.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=14.1.0.36, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2015.2.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a" />
+    <Reference Include="Stimulsoft.Report, Version=2015.2.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Stimulsoft Reports Ultimate Suite 2015.2 Retail\Net\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Stimulsoft Reports Ultimate Suite 2015.2 Retail\Net\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\classTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DeptTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\selectCourse.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\stTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\teacherTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usersTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMine.Designer.cs">
+      <DependentUpon>FrmMine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetCollegeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NetCollegeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tools\RtlMessageBox.cs" />
+    <Compile Include="tools\user.cs" />
+    <Compile Include="tools\UserControlBackUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControlBackUp.Designer.cs">
+      <DependentUpon>UserControlBackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools\UserControlclass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControlclass.Designer.cs">
+      <DependentUpon>UserControlclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools\UserControlCo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControlCo.Designer.cs">
+      <DependentUpon>UserControlCo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools\UserControldep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControldep.Designer.cs">
+      <DependentUpon>UserControldep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools\UserControlreport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControlreport.Designer.cs">
+      <DependentUpon>UserControlreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools\UserControlselectCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControlselectCourse.Designer.cs">
+      <DependentUpon>UserControlselectCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools\UserControlSt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControlSt.Designer.cs">
+      <DependentUpon>UserControlSt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools\UserControlTE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControlTE.Designer.cs">
+      <DependentUpon>UserControlTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools\UserControluser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tools\UserControluser.Designer.cs">
+      <DependentUpon>UserControluser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMine.resx">
+      <DependentUpon>FrmMine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="tools\UserControlBackUp.resx">
+      <DependentUpon>UserControlBackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tools\UserControlclass.resx">
+      <DependentUpon>UserControlclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tools\UserControlCo.resx">
+      <DependentUpon>UserControlCo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tools\UserControldep.resx">
+      <DependentUpon>UserControldep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tools\UserControlreport.resx">
+      <DependentUpon>UserControlreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tools\UserControlselectCourse.resx">
+      <DependentUpon>UserControlselectCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tools\UserControlSt.resx">
+      <DependentUpon>UserControlSt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tools\UserControlTE.resx">
+      <DependentUpon>UserControlTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tools\UserControluser.resx">
+      <DependentUpon>UserControluser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Data\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.config" />
+    <None Include="Data\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="NetCollegeDataSet.xsc">
+      <DependentUpon>NetCollegeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NetCollegeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NetCollegeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NetCollegeDataSet.xss">
+      <DependentUpon>NetCollegeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\..\..\..\Program Files %28x86%29\Stimulsoft Reports Ultimate Suite 2015.2 Retail\Net\Stimulsoft.Report.dll" />
+    <Analyzer Include="bin\Debug\PersianDate.dll" />
+    <Analyzer Include="bin\Debug\PersianDateControls.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="icons8_school_building.ico" />
+    <None Include="Resources\icons8_motarboard.ico" />
+    <None Include="Resources\icons8_student_center_480px.png" />
+    <None Include="Resources\icons8_student_center.ico" />
+    <None Include="Resources\icons8_school_building_480px.png" />
+    <None Include="Resources\icons8_wink_48px.png" />
+    <None Include="Resources\icons8_synchronize_43px.png" />
+    <None Include="Resources\icons8_student_male_43px.png" />
+    <None Include="Resources\icons8_student_male_200px.png" />
+    <None Include="Resources\icons8_school_director_43px.png" />
+    <None Include="Resources\icons8_school_director_200px.png" />
+    <None Include="Resources\icons8_school_43px.png" />
+    <None Include="Resources\icons8_save_as_43px.png" />
+    <None Include="Resources\icons8_save_43px.png" />
+    <None Include="Resources\icons8_question_48px.png" />
+    <None Include="Resources\icons8_plus_43px.png" />
+    <None Include="Resources\icons8_ok_15px.png" />
+    <None Include="Resources\icons8_motarboard_43px.png" />
+    <None Include="Resources\icons8_info_43px.png" />
+    <None Include="Resources\icons8_home_43px.png" />
+    <None Include="Resources\icons8_elective_43px.png" />
+    <None Include="Resources\icons8_elective_200px.png" />
+    <None Include="Resources\icons8_edit_43px.png" />
+    <None Include="Resources\icons8_data_backup_43px.png" />
+    <None Include="Resources\icons8_courses_43px.png" />
+    <None Include="Resources\icons8_courses_150px.png" />
+    <None Include="Resources\icons8_classroom_43px.png" />
+    <None Include="Resources\icons8_cancel_43px.png" />
+    <None Include="Resources\icons8_cancel_15px.png" />
+    <None Include="Resources\icons8_assignment_turned_in_43px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

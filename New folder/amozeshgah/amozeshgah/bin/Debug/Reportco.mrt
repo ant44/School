@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <course Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>course</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="8">
+          <value>coid,System.String</value>
+          <value>teacherId,System.String</value>
+          <value>dptID,System.String</value>
+          <value>hour,System.String</value>
+          <value>start_date,System.String</value>
+          <value>classId,System.String</value>
+          <value>price,System.String</value>
+          <value>logo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>40052fa7ad01438ea8fd645a0319935e</Guid>
+        <Name>course</Name>
+      </course>
+    </BusinessObjects>
+    <Databases isList="true" count="1">
+      <MSSQL1 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MSSQL1</Alias>
+        <ConnectionStringEncrypted>+XT7CU9ZAfXhWu3senjrY55g2YhhVHud/E+5yWlcJV7zxJWhzVd73WkI1b16cGE/0XD3KE9Wu9VnXTnU8VykP8Q=</ConnectionStringEncrypted>
+        <Name>MSSQL1</Name>
+      </MSSQL1>
+    </Databases>
+    <DataSources isList="true" count="8">
+      <classTable Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>classTable</Alias>
+        <Columns isList="true" count="5">
+          <value>capacity,System.Int32</value>
+          <value>class_ID,System.String</value>
+          <value>video_projector,System.Boolean</value>
+          <value>cooler,System.Boolean</value>
+          <value>description,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>classTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from classTable</SqlCommand>
+      </classTable>
+      <CoTable Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>CoTable</Alias>
+        <Columns isList="true" count="9">
+          <value>coid,System.String</value>
+          <value>teacherId,System.String</value>
+          <value>dptID,System.Int32</value>
+          <value>price,System.Int32</value>
+          <value>capacity,System.Int32</value>
+          <value>hour,System.Int32</value>
+          <value>start_date,System.String</value>
+          <value>classId,System.String</value>
+          <value>logo,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>CoTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from CoTable</SqlCommand>
+      </CoTable>
+      <DeptTable Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DeptTable</Alias>
+        <Columns isList="true" count="3">
+          <value>deptId,System.Int32</value>
+          <value>deptName,System.String</value>
+          <value>boss,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DeptTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from DeptTable</SqlCommand>
+      </DeptTable>
+      <selectCourse Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>selectCourse</Alias>
+        <Columns isList="true" count="6">
+          <value>rowID,System.Int32</value>
+          <value>stid,System.String</value>
+          <value>coid,System.String</value>
+          <value>grade,System.Single</value>
+          <value>description,System.String</value>
+          <value>pardakht,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>selectCourse</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from selectCourse</SqlCommand>
+      </selectCourse>
+      <stTable Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>stTable</Alias>
+        <Columns isList="true" count="6">
+          <value>studentID,System.String</value>
+          <value>stName,System.String</value>
+          <value>stFamily,System.String</value>
+          <value>stAddress,System.String</value>
+          <value>stImage,System.String</value>
+          <value>stTel,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>stTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from stTable</SqlCommand>
+      </stTable>
+      <sysdiagrams Ref="9" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>sysdiagrams</Alias>
+        <Columns isList="true" count="5">
+          <value>name,System.String</value>
+          <value>principal_id,System.Int32</value>
+          <value>diagram_id,System.Int32</value>
+          <value>version,System.Int32</value>
+          <value>definition,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>sysdiagrams</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from sysdiagrams</SqlCommand>
+      </sysdiagrams>
+      <teacherTable Ref="10" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>teacherTable</Alias>
+        <Columns isList="true" count="8">
+          <value>teacherId,System.String</value>
+          <value>teacherName,System.String</value>
+          <value>teacherFamily,System.String</value>
+          <value>teacherAddress,System.String</value>
+          <value>teacherTel,System.String</value>
+          <value>TeacherCetifacrte,System.String</value>
+          <value>TeacherExpert,System.String</value>
+          <value>teImage,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>teacherTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from teacherTable</SqlCommand>
+      </teacherTable>
+      <usersTable Ref="11" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>usersTable</Alias>
+        <Columns isList="true" count="5">
+          <value>username,System.String</value>
+          <value>password,System.String</value>
+          <value>uname,System.String</value>
+          <value>ufamily,System.String</value>
+          <value>accessType,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>usersTable</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from usersTable</SqlCommand>
+      </usersTable>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="12" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <ReportTitleBand1 Ref="13" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.2,7.72,0.8</ClientRectangle>
+          <Components isList="true" count="6">
+            <HeaderCoTable_coid Ref="14" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Red</Brush>
+              <ClientRectangle>0,0.4,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCoTable_coid</Name>
+              <Page isRef="12" />
+              <Parent isRef="13" />
+              <Text>کد دوره</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCoTable_coid>
+            <HeaderCoTable_teacherId Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Red</Brush>
+              <ClientRectangle>1.3,0.4,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCoTable_teacherId</Name>
+              <Page isRef="12" />
+              <Parent isRef="13" />
+              <Text>کد استاد</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCoTable_teacherId>
+            <HeaderCoTable_price Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Red</Brush>
+              <ClientRectangle>2.6,0.4,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCoTable_price</Name>
+              <Page isRef="12" />
+              <Parent isRef="13" />
+              <Text>هزینه</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCoTable_price>
+            <HeaderCoTable_hour Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Red</Brush>
+              <ClientRectangle>3.9,0.4,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCoTable_hour</Name>
+              <Page isRef="12" />
+              <Parent isRef="13" />
+              <Text>ساعت</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCoTable_hour>
+            <HeaderCoTable_capacity Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Red</Brush>
+              <ClientRectangle>5.2,0.4,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCoTable_capacity</Name>
+              <Page isRef="12" />
+              <Parent isRef="13" />
+              <Text>ظرفیت</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCoTable_capacity>
+            <HeaderCoTable_start_date Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Red</Brush>
+              <ClientRectangle>6.5,0.4,1.2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCoTable_start_date</Name>
+              <Page isRef="12" />
+              <Parent isRef="13" />
+              <Text>تاریخ شروع</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCoTable_start_date>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="12" />
+          <Parent isRef="12" />
+        </ReportTitleBand1>
+        <HeaderCoTable Ref="20" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.4,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>HeaderCoTable</Name>
+          <Page isRef="12" />
+          <Parent isRef="12" />
+        </HeaderCoTable>
+        <DataCoTable Ref="21" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,2.1,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="6">
+            <DataCoTable_coid Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:147:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataCoTable_coid</Name>
+              <Page isRef="12" />
+              <Parent isRef="21" />
+              <Text>{CoTable.coid}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataCoTable_coid>
+            <DataCoTable_teacherId Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:147:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.3,0,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataCoTable_teacherId</Name>
+              <Page isRef="12" />
+              <Parent isRef="21" />
+              <Text>{CoTable.teacherId}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataCoTable_teacherId>
+            <DataCoTable_price Ref="24" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:147:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.6,0,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataCoTable_price</Name>
+              <Page isRef="12" />
+              <Parent isRef="21" />
+              <Text>{CoTable.price}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataCoTable_price>
+            <DataCoTable_hour Ref="25" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:147:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.9,0,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataCoTable_hour</Name>
+              <Page isRef="12" />
+              <Parent isRef="21" />
+              <Text>{CoTable.hour}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataCoTable_hour>
+            <DataCoTable_capacity Ref="26" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:147:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.2,0,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataCoTable_capacity</Name>
+              <Page isRef="12" />
+              <Parent isRef="21" />
+              <Text>{CoTable.capacity}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataCoTable_capacity>
+            <DataCoTable_start_date Ref="27" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:147:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.5,0,1.2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataCoTable_start_date</Name>
+              <Page isRef="12" />
+              <Parent isRef="21" />
+              <Text>{CoTable.start_date}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataCoTable_start_date>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>CoTable</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataCoTable</Name>
+          <Page isRef="12" />
+          <Parent isRef="12" />
+          <Sort isList="true" count="0" />
+        </DataCoTable>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>a782fd158763497bbe55acf38134c0c9</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="28" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="29" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/13/2019 10:04:24 PM</ReportChanged>
+  <ReportCreated>12/13/2019 4:07:26 PM</ReportCreated>
+  <ReportFile>C:\Users\phara\Desktop\New folder\amozeshgah\amozeshgah\bin\Debug\Reportco.mrt</ReportFile>
+  <ReportGuid>9844c47930e04534aff17b7146070bd1</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2015.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
